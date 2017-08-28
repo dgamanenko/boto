@@ -138,7 +138,7 @@ def connect_s3(aws_access_key_id=None, aws_secret_access_key=None, **kwargs):
     :return: A connection to Amazon's S3
     """
     from boto.s3.connection import S3Connection
-    return S3Connection(aws_access_key_id, aws_secret_access_key, **kwargs)
+    return S3Connection(aws_access_key_id, aws_secret_access_key, host='s3.ap-south-1.amazonaws.com', **kwargs)
 
 
 def connect_gs(gs_access_key_id=None, gs_secret_access_key=None, **kwargs):
